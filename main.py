@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-  
   return'Api working!'
   
 @app.route('/login', methods = ['POST'])
