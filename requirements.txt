@@ -2,4 +2,5 @@ gunicorn
 samino
 Flask
 ujson
+aiohttp
 
