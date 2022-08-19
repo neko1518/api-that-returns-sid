@@ -11,8 +11,8 @@ def homepage():
 def teste_endpoint():
   data = request.form
   email = data["email"]
-  senha = data["senha"]
+  password = data["senha"]
   device = data["device"]
-  #sid =samino.Client().login(email,senha).sid
-
-  return jsonify(email)
+  client = samino.Client(device)
+  sid = client.login(email,password).sid
+  return jsonify(sid)
