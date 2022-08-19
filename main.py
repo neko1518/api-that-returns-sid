@@ -8,7 +8,7 @@ def homepage():
   return'Api working!'
   
 @app.route('/login', methods = ['POST'])
-def teste_endpoint():
+def only_endpoint():
   data = request.form
   email = data["email"]
   password = data["password"]
