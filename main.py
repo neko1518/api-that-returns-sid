@@ -5,13 +5,13 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
   
-  return'essa é minha homepage'
+  return'Api working!'
   
-@app.route('/teste', methods = ['POST'])
+@app.route('/login', methods = ['POST'])
 def teste_endpoint():
   data = request.form
   email = data["email"]
-  password = data["senha"]
+  password = data["password"]
   device = data["device"]
   client = samino.Client(device)
   sid = client.login(email,password).sid
