@@ -9,5 +9,5 @@ def login():
   password = data["password"]
   device = data["device"]
   client = samino.Client(device)
-  login = client.login(email,password)
-  return login
+  x = client.login(email,password)
+  return x
