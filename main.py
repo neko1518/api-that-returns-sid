@@ -14,4 +14,4 @@ def only_endpoint():
   device = data["device"]
   client = samino.Client(device)
   client.login(email,password)
-  return f"{client.sid)"
+  return f"{client.sid}"
