@@ -9,5 +9,5 @@ def login():
   password = data["password"]
   device = data["device"]
   client = samino.Client(device)
-  sid = client.login(email,password).sid
-  return jsonify(sid)
+  login = client.login(email,password)
+  return jsonify(login)
