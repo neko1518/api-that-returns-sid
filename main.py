@@ -1,4 +1,4 @@
-from flask import Flask,request
+from flask import Flask, request, jsonify 
 import samino
 app = Flask(__name__)
 
@@ -9,4 +9,5 @@ def login():
   password = data["password"]
   device = data["device"]
   client = samino.Client(device)
-  return client.login(email,password).sid
+  sid = client.login(email,password).sid
+  return jsonify(sid)
